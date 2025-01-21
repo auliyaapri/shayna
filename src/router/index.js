@@ -10,13 +10,7 @@ import RegisterView from '@/views/RegisterView.vue'
 import ProfileUserView from '@/views/ProfileUserView.vue'
 import AboutView2 from '@/views/AboutView2.vue'
 import ContactView from '@/views/ContactView.vue'
-<<<<<<< HEAD
 import DetailTransaction from '@/views/DetailTransaction.vue'
-
-=======
->>>>>>> 09455d458d42311d3de0785e196de13fe96210c2
-
-import bre from '@/views/bre.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -25,76 +19,68 @@ const router = createRouter({
       path: "/",
       name: "home",
       component: HomeView,
-      meta: { title: "Home" }, // Title untuk rute ini
+      meta: { title: "Home" },
     },
     {
       path: "/about",
       name: "about",
       component: AboutView,
-      meta: { title: "About" }, // Title untuk rute ini
+      meta: { title: "About" },
     },
     {
       path: "/contact",
       name: "contact",
       component: ContactView,
-      meta: { title: "Contact" }, // Title untuk rute ini
+      meta: { title: "Contact" },
     },
     {
       path: "/about2",
       name: "about2",
       component: AboutView2,
-      meta: { title: "About" }, // Title untuk rute ini
+      meta: { title: "About" },
     },
     {
       path: "/login",
       name: "login",
       component: LoginView,
-      meta: { title: "Login" }, // Title untuk rute ini
+      meta: { title: "Login" },
     },
     {
       path: "/register",
       name: "register",
       component: RegisterView,
-      meta: { title: "register" }, // Title untuk rute ini
+      meta: { title: "register" },
     },
     {
       path: "/products",
       name: "product",
       component: ProductView,
-      meta: { title: "Products" }, // Title untuk rute ini
+      meta: { title: "Products" },
     },
     {
       path: "/profileUser",
       name: "profile",
       component: ProfileUserView,
-      meta: { title: "Profile User" }, // Title untuk rute ini
-    },
-
-    {
-      path: "/bre",
-      name: "bre",
-      component: bre,
-      meta: { title: "bre" }, // Title untuk rute ini
+      meta: { title: "Profile User" },
     },
     {
       path: "/detail/:id",
       name: "detail",
       props: true,
       component: DetailProduct,
-      meta: { title: "Detail" }, // Title untuk rute ini
+      meta: { title: "Detail" },
     },
     {
-<<<<<<< HEAD
+
       path: "/detailTransaction",
       name: "detailTransaction",
       props: true,
       component: DetailTransaction,
-      meta: { title: "Detail Transaksi" }, // Title untuk rute ini
+      meta: { title: "Detail Transaksi" },
     },
 
     {
-=======
->>>>>>> 09455d458d42311d3de0785e196de13fe96210c2
+
       path: "/cart",
       name: "cart",
       component: ShoppingCart,

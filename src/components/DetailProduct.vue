@@ -19,7 +19,7 @@ const quantity = ref(0);
 const productDetails = ref({});
 const activeThumbnail = ref(null);
 const jumlah = ref(1);
-// console.log(jumlahKeranjang);
+
 
 
 
@@ -57,7 +57,6 @@ const formatPrice = (price) => {
 };
 
 const saveKeranjang = async (product, priceProduct, jumlahInput) => {
-
   let productStored = {
     product_id: product,
     quantity: jumlahInput,
@@ -191,8 +190,7 @@ onMounted(() => {
         <div class="d-flex justify-content-between">
           <div class="product-title">{{ productDetails.name }}</div>
           <div class="product-title" v-if="productDetails.category">{{ productDetails.category.name }}</div>
-        </div>
-        <!-- <div class="product-author">{{ productDetails.type }}</div> -->
+        </div>        
         <div class="d-flex justify-content-between pt-2">
           <div class="product-price">{{ formatPrice(productDetails.price) }}</div>
           <div class="product-author">Stok : {{ productDetails.quantity }}</div>
@@ -203,9 +201,6 @@ onMounted(() => {
             <input type="number" class="form-control w-75" v-model="jumlah" @input="checkQuantity" min="1" />
 
           </div>
-
-
-          <!-- Button di template -->
           <button id="addToCart" class="btn btn-success mt-3" @click="
             saveKeranjang(
               productDetails.id,
